@@ -1,36 +1,25 @@
 # Wave app for H2O AutoML
 
-## System Requirements 
-1. Python 3.6+
-2. pip3
+## Overview
+Wave App for H2O AutoML provides an interactive interface to leverage H2O's AutoML capabilities seamlessly. This setup uses Docker Compose to simplify installation and deployment.
 
-## Installation 
-
-### 1. Run the Wave Server
-Follow the instructions [here](https://wave.h2o.ai/docs/installation) to download and run the latest Wave Server, a requirement for apps. 
-
-### 2. Setup Your Python Environment
-
+## Installation
+### 1. Clone the Repository
 ```bash
-$ git clone git@github.com:h2oai/wave-h2o-automl.git
-$ cd wave-h2o-automl
-$ make setup
-$ source venv/bin/activate
+$ git clone git@github.com:Elkhn/h2o-automl-docker.git
+$ cd h2o-automl-docker
+$ docker-compose up --build
 ```
-
-### 3. Run the App
-
-```bash
-wave run src.app
-```
-
-Note! If you did not activate your virtual environment this will be:
-```bash
-./venv/bin/wave run src.app
-```
-
-### 4. View the App
+### 2. View the App
 Point your favorite web browser to [localhost:10101](http://localhost:10101)
+
+## Additional Information
+* Configuration: Customize environment variables and settings by editing the docker-compose.yml file.
+* Logs: View logs for all services by running docker-compose logs -f.
+* Volume Management: Data persistence and volume management can be configured within the docker-compose.yml file.
+
+For further assistance, refer to the [H2O AutoML](https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html).
+
 
 <img alt="homepage" src="static/screenshot-1.png">
 

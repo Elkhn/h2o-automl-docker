@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  h2o-automl:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: on-failure
+    ports:
+      - "10101:10101"
+    command: bash -c "source venv/bin/activate && wave run src.app"
+
